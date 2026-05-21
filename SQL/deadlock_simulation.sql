@@ -1,0 +1,14 @@
+USE ticket_system;
+
+START TRANSACTION;
+
+SELECT * FROM Seats WHERE seat_id = 1 FOR UPDATE;
+START TRANSACTION;
+
+SELECT * FROM Seats WHERE seat_id = 2 FOR UPDATE;
+
+SELECT * FROM Seats WHERE seat_id = 2 FOR UPDATE;
+
+SELECT * FROM Seats WHERE seat_id = 1 FOR UPDATE;
+
+ROLLBACK;
