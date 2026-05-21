@@ -43,14 +43,14 @@ Stores users waiting for a seat when a trip is fully booked.
 
 | 📁 File Name | 📌 Description |
 |---|---|
-| `q1_database_design.sql` | Database schema — tables, constraints, sample data |
-| `q2_booking_transaction.sql` | Transaction-safe booking using `FOR UPDATE NOWAIT` |
-| `q3_parallel_booking.sql` | Multi-user parallel booking using `SKIP LOCKED` |
-| `q4_deadlock_simulation.sql` | Deadlock demo across two sessions + prevention strategy |
-| `q5_optimistic_locking.sql` | Version-based conflict detection without upfront locks |
-| `q6_failure_rollback.sql` | Payment failure simulation and automatic rollback |
-| `q7_isolation_levels.sql` | READ COMMITTED vs SERIALIZABLE — analysis & comparison |
-| `q8_bonus_challenge.sql` | Auto seat release after timeout + waiting queue |
+| `database_design.sql` | Database schema — tables, constraints, sample data |
+| `booking_transaction.sql` | Transaction-safe booking using `FOR UPDATE NOWAIT` |
+| `parallel_booking.sql` | Multi-user parallel booking using `SKIP LOCKED` |
+| `deadlock_simulation.sql` | Deadlock demo across two sessions + prevention strategy |
+| `optimistic_locking.sql` | Version-based conflict detection without upfront locks |
+| `failure_rollback.sql` | Payment failure simulation and automatic rollback |
+| `isolation_levels.sql` | READ COMMITTED vs SERIALIZABLE — analysis & comparison |
+| `bonus_challenge.sql` | Auto seat release after timeout + waiting queue |
 
 ---
 
@@ -104,13 +104,13 @@ Execution screenshots and query outputs are available in the `OUTPUTS/` folder.
 
 # ▶️ How to Run
 
-1. Open MySQL and run `q1_database_design.sql` first to set up the database  
-2. Run each file in order from Q1 to Q8  
-3. For **Q4 (Deadlock)**, open two separate query tabs and follow the step-by-step instructions inside the file  
+1. Open MySQL and run `database_design.sql` first to set up the database  
+2. Run each file in order from database_design to bonus_challenge  
+3. For **deadlock_simulation**, open two separate query tabs and follow the step-by-step instructions inside the file  
 
 ```sql
 -- Start here
-source q1_database_design.sql;
+source database_design.sql;
 ```
 
 > ⚠️ Requires **MySQL 8.0+** — `FOR UPDATE NOWAIT` and `SKIP LOCKED` are not available in older versions.
